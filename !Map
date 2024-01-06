@@ -1,3 +1,4 @@
+repeat wait() until game:IsLoaded() and pcall(function() local _ = game.HttpGet end);
 if game.PlaceId == 8737899170 or game.PlaceId == 13764885284 or game.PlaceId == 15502339080 or game.PlaceId == 15588442388 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/DevSoGod/Buszy/main/Pet'))()
 elseif game.PlaceId == 3475397644 or game.PlaceId == 4869039553 then
