@@ -1,5 +1,14 @@
-if game.PlaceId == 8737899170 or game.PlaceId == 13764885284 or game.PlaceId == 15502339080 or game.PlaceId == 15588442388 then
-loadstring(game:HttpGet('https://raw.githubusercontent.com/DevSoGod/Buszy/main/Pet'))()
-elseif game.PlaceId == 3475397644 or game.PlaceId == 4869039553 then
-loadstring(game:HttpGet('https://raw.githubusercontent.com/DevSoGod/Buszy/main/Dragon'))()
+repeat wait() until game:IsLoaded() and pcall(function() local _ = game.HttpGet end);
+if getgenv().AlreadyExecuted then
+	return Notification(1, "SmellLikehacker Hub", "AlreadyExecuted",5)
 end
+getgenv().AlreadyExecuted = true
+task.spawn(function()
+	local queue_on_teleport = (syn and syn.queue_on_teleport) or queue_on_teleport or queueonteleport
+	if queue_on_teleport then
+		pcall(function()
+			queue_on_teleport('loadstring(game:HttpGet"https://raw.githubusercontent.com/DevSoGod/Buszy/main/Hub")()')
+		end)
+	end
+end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DevSoGod/Buszy/main/!Map"))()
