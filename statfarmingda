@@ -35,7 +35,7 @@ local BG = Instance.new("Frame")
 --Properties:
 
 xBuszySky.Name = "xBuszySky";
-xBuszySky.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+xBuszySky.Parent = game:GetService("CoreGui")
 xBuszySky.ResetOnSpawn = false;
 xBuszySky.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
 xBuszySky.IgnoreGuiInset = true;
@@ -43,12 +43,22 @@ xBuszySky.AutoLocalize = true;
 xBuszySky.ZIndexBehavior = "Global";
 xBuszySky.ScreenInsets = "DeviceSafeInsets";
 
+BG.Name = "BG"
+BG.Parent = xBuszySky
+BG.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BG.BackgroundTransparency = 0.1
+BG.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BG.BorderSizePixel = 0
+BG.Position = UDim2.new(0, 0, -0.0404624268, 0)
+BG.Size = UDim2.new(0, 960, 0, 540)
+
+
 ImageLabel.Parent = xBuszySky
 ImageLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0, 0, -0.300000012, 0)
+ImageLabel.Position = UDim2.new(0, 0, -0.2, 0)
 ImageLabel.Size = UDim2.new(1, 0, 1, 0)
 ImageLabel.Image = "http://www.roblox.com/asset/?id=18276299319"
 
@@ -58,18 +68,9 @@ meat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 meat.BackgroundTransparency = 1.000
 meat.BorderColor3 = Color3.fromRGB(0, 0, 0)
 meat.BorderSizePixel = 0
-meat.Position = UDim2.new(0.282000005, 0, 0.206, 0)
+meat.Position = UDim2.new(0.282000005, 0, 0.306, 0)
 meat.Size = UDim2.new(0, 548, 0, 28)
 
-BG.Name = "BG"
-BG.Parent = xBuszySky
-BG.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-BG.BackgroundTransparency = 0.200
-BG.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BG.BorderSizePixel = 0
-BG.Position = UDim2.new(0, 0, -0.0404624268, 0)
-BG.Size = UDim2.new(0, 960, 0, 540)
-BG.ZIndex = -1
 
 Value.Name = "Value"
 Value.Parent = meat
@@ -125,7 +126,7 @@ bacon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 bacon.BackgroundTransparency = 1.000
 bacon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 bacon.BorderSizePixel = 0
-bacon.Position = UDim2.new(0.569000006, 0, 0.206, 0)
+bacon.Position = UDim2.new(0.569000006, 0, 0.306, 0)
 bacon.Size = UDim2.new(0, 548, 0, 28)
 
 Value_2.Name = "Value"
@@ -182,7 +183,7 @@ coin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 coin.BackgroundTransparency = 1.000
 coin.BorderColor3 = Color3.fromRGB(0, 0, 0)
 coin.BorderSizePixel = 0
-coin.Position = UDim2.new(0.569000006, 0, 0.197999999, 0)
+coin.Position = UDim2.new(0.569000006, 0, 0.298, 0)
 coin.Size = UDim2.new(0, 548, 0, 28)
 
 Value_3.Name = "Value"
@@ -238,7 +239,7 @@ PlayersCount.Parent = xBuszySky
 PlayersCount.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 PlayersCount.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PlayersCount.BorderSizePixel = 0
-PlayersCount.Position = UDim2.new(0.812878788, 0, 0.358031273, 0)
+PlayersCount.Position = UDim2.new(0.812878788, 0, 0.458, 0)
 PlayersCount.Size = UDim2.new(0, 147, 0, 131)
 PlayersCount.Font = Enum.Font.FredokaOne
 PlayersCount.Text = "20"
@@ -252,7 +253,7 @@ TextLabel_4.Parent = xBuszySky
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.0389186852, 0, 0.358031273, 0)
+TextLabel_4.Position = UDim2.new(0.0389186852, 0, 0.458, 0)
 TextLabel_4.Size = UDim2.new(0, 147, 0, 131)
 TextLabel_4.Font = Enum.Font.FredokaOne
 TextLabel_4.Text = " "
@@ -389,7 +390,7 @@ local IconImage = Instance.new("ImageLabel");
 local IconLabel_3 = Instance.new("TextLabel");
 local UICorner_3 = Instance.new("UICorner");
 GuiStat.Name = "StatBySmell";
-GuiStat.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+GuiStat.Parent = game:GetService("CoreGui")
 GuiStat.ResetOnSpawn = false;
 GuiStat.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
 GuiStat.IgnoreGuiInset = true;
@@ -451,57 +452,57 @@ RainbowText(IconLabel_3);
 RainbowImage(IconImage);
 
 spawn(function()
-    while wait(.2) do
-        game.Players.LocalPlayer:WaitForChild("PlayerGui").xBuszySky.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        wait(.2)
-		game.Players.LocalPlayer:WaitForChild("PlayerGui").xBuszySky.TextLabel.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-    end
+	while wait(.2) do
+		game:GetService("CoreGui").xBuszySky.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		wait(.2)
+		game:GetService("CoreGui").xBuszySky.TextLabel.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+	end
 end)
 function number(num)
-    local v = tostring(num)
-    while true do
-        v, k = string.gsub(v, "^(-?%d+)(%d%d%d)", '%1,%2')
-        if k == 0 then
-            break
-        end
-    end
-    return v
+	local v = tostring(num)
+	while true do
+		v, k = string.gsub(v, "^(-?%d+)(%d%d%d)", '%1,%2')
+		if k == 0 then
+			break
+		end
+	end
+	return v
 end
 spawn(function()
-    while wait(.2) do
-        pcall(function()
-            game.Players.LocalPlayer:WaitForChild("PlayerGui").xBuszySky.coin.Value.TextLabel.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Currency.Coins.Value))
-            game.Players.LocalPlayer:WaitForChild("PlayerGui").xBuszySky.coin.Value.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Currency.Coins.Value))
-        end)
-    end
+	while wait(.2) do
+		pcall(function()
+			game:GetService("CoreGui").xBuszySky.coin.Value.TextLabel.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Currency.Coins.Value))
+			game:GetService("CoreGui").xBuszySky.coin.Value.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Currency.Coins.Value))
+		end)
+	end
 end)
 spawn(function()
-    while wait(.2) do
-        pcall(function()
-            game.Players.LocalPlayer:WaitForChild("PlayerGui").xBuszySky.bacon.Value.TextLabel.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Resources.Bacon.Value))
-            game.Players.LocalPlayer:WaitForChild("PlayerGui").xBuszySky.bacon.Value.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Resources.Bacon.Value))
-        end)
-    end
+	while wait(.2) do
+		pcall(function()
+			game:GetService("CoreGui").xBuszySky.bacon.Value.TextLabel.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Resources.Bacon.Value))
+			game:GetService("CoreGui").xBuszySky.bacon.Value.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Resources.Bacon.Value))
+		end)
+	end
 end)
 spawn(function()
-    while wait(.2) do
-        pcall(function()
-            game.Players.LocalPlayer:WaitForChild("PlayerGui").xBuszySky.meat.Value.TextLabel.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Resources.Meat.Value))
-            game.Players.LocalPlayer:WaitForChild("PlayerGui").xBuszySky.meat.Value.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Resources.Meat.Value))
-        end)
-    end
+	while wait(.2) do
+		pcall(function()
+			game:GetService("CoreGui").xBuszySky.meat.Value.TextLabel.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Resources.Meat.Value))
+			game:GetService("CoreGui").xBuszySky.meat.Value.Text = tostring(number(game:GetService("Players").LocalPlayer.Data.Resources.Meat.Value))
+		end)
+	end
 end)
 spawn(function()
-    while wait(.2) do
-        pcall(function()
+	while wait(.2) do
+		pcall(function()
 			PlayersCount.Text = tostring(#game.Players:GetChildren())
 		end)
 		pcall(function()
-            if game:GetService("Players").LocalPlayer.Data.Worlds.Prehistoric.Value == true then
-                PlayersCount.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-            else
-                PlayersCount.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-            end
-        end)
-    end
+			if game:GetService("Players").LocalPlayer.Data.Worlds.Prehistoric.Value == true then
+				PlayersCount.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			else
+				PlayersCount.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			end
+		end)
+	end
 end)
