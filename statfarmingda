@@ -49,8 +49,8 @@ BG.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 BG.BackgroundTransparency = 0.1
 BG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 BG.BorderSizePixel = 0
-BG.Position = UDim2.new(0, 0, -0.0404624268, 0)
-BG.Size = UDim2.new(0, 960, 0, 540)
+BG.Position = UDim2.new(0, 0, 0, 0)
+BG.Size = UDim2.new(0, 9e9, 0, 9e9)
 
 
 ImageLabel.Parent = xBuszySky
